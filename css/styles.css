@@ -16,17 +16,17 @@ html, body {
   font-family: "Hiragino Mincho ProN", "Times New Roman", serif;
   line-height: 1.6;
 }
-a {
-  text-decoration: none;
-  color: inherit;
-}
 .wrapper {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-/* ===== Header: PC & SP ===== */
+/* ===== Header (PC & SP) ===== */
 .site-header {
   background: #1f1f1f;
 }
@@ -37,14 +37,14 @@ a {
 }
 .pc-header-inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 0;
 }
 .pc-logo {
   font-size: 1.8rem;
-  color: #c8b998;
   font-weight: bold;
+  color: #c8b998;
 }
 .pc-nav ul {
   list-style: none;
@@ -52,7 +52,7 @@ a {
   gap: 20px;
 }
 .pc-nav li a {
-  color: #ffffff;
+  color: #fff;
   padding: 5px 10px;
   transition: background-color 0.3s ease;
 }
@@ -61,11 +61,11 @@ a {
   color: #2b2b2b;
 }
 .pc-lang-buttons button {
-  width: 40px;
+  width: 40px; 
   height: 40px;
   border: 1px solid #c8b998;
   background: transparent;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
   margin-left: 5px;
   transition: all 0.3s ease;
@@ -82,12 +82,12 @@ a {
 }
 .sp-header-inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 0;
 }
 .hamburger {
-  width: 40px;
+  width: 40px; 
   height: 40px;
   display: flex;
   flex-direction: column;
@@ -96,21 +96,21 @@ a {
   cursor: pointer;
 }
 .hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: #ffffff;
+  width: 25px; 
+  height: 3px; 
+  background-color: #fff;
 }
 .sp-site-title {
   font-size: 1.8rem;
-  color: #c8b998;
   font-weight: bold;
+  color: #c8b998;
 }
 .sp-lang-buttons button {
-  width: 40px;
-  height: 40px;
+  width: 40px; 
+  height: 40px; 
   border: 1px solid #c8b998;
   background: transparent;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
   margin-left: 5px;
   transition: all 0.3s ease;
@@ -120,11 +120,11 @@ a {
   color: #2b2b2b;
 }
 
-/* ハンバーガーメニュー: オーバーレイ */
+/* ハンバーガーメニュー: overlay */
 .overlay-menu {
   position: fixed;
   top: 0; left: 0;
-  width: 100%;
+  width: 100%; 
   height: 100%;
   background: rgba(0,0,0,0.9);
   transform: translateY(-100%);
@@ -135,9 +135,9 @@ a {
   transform: translateY(0);
 }
 .overlay-content {
-  display: flex;
+  display: flex; 
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
   height: 100%;
 }
@@ -148,8 +148,8 @@ a {
   margin: 15px 0;
 }
 .overlay-content li a {
-  color: #fff;
   font-size: 1.3rem;
+  color: #fff;
 }
 .close-btn {
   position: absolute;
@@ -159,7 +159,7 @@ a {
   cursor: pointer;
 }
 
-/* ===== Hero (Top Page) ===== */
+/* ===== Hero (トップページ) ===== */
 .hero {
   position: relative;
   width: 100%;
@@ -186,7 +186,7 @@ a {
   font-size: 1.2rem;
 }
 
-/* ===== Common Sections ===== */
+/* ===== Section Titles & Layouts ===== */
 section {
   padding: 50px 0;
 }
@@ -206,7 +206,7 @@ section {
   flex: 1;
 }
 
-/* ===== Table (2列固定) (Menu Page) ===== */
+/* ===== Menu Tables (2列固定) ===== */
 .menu-table {
   width: 100%;
   table-layout: fixed;
@@ -218,7 +218,7 @@ section {
   padding: 10px;
   text-align: left;
   vertical-align: top;
-  word-wrap: break-word;
+  word-wrap: break-word; 
   white-space: normal;
 }
 .menu-table th {
@@ -229,48 +229,49 @@ section {
   background-color: #3b3b3b;
 }
 
-/* ===== slickスライダー用 (メニューページ) ===== */
+/* ===== slickスライダー (メニューページ) ===== */
 .slick-slider {
   width: 100%;
   max-width: 600px;
-  margin: 20px auto;
+  margin: 20px auto;  
   text-align: center;
 }
-/* 画像1.3倍 => 150px→195px */
 .slick-slider img {
-  width: 195px;
+  /* 1.3倍 => 150px -> 195px */
+  width: 195px; 
   height: auto;
   margin: 0 auto;
   display: block;
 }
 
-/* slickの左右矢印・ドットまわりの余白を狭める => override slick defaults */
+/* slickの左右矢印/ドットまわり: 余白を狭め */
 .slick-prev, .slick-next {
-  z-index: 1000;
   width: 30px; 
   height: 30px;
-  line-height: 30px;
   background: rgba(200,185,152,0.8);
   border-radius: 50%;
-  color: #2b2b2b;
-  text-align: center;
   font-size: 16px;
-  transition: 0.3s;
+  color: #2b2b2b;
+  line-height: 30px;
+  text-align: center;
 }
 .slick-prev:hover, .slick-next:hover {
   background: #c8b998;
 }
 .slick-prev:before, .slick-next:before {
   font-family: 'slick';
-  font-size: 16px;
-  line-height: 1;
-  opacity: 1;
   color: #2b2b2b;
+  font-size: 16px;
+  opacity: 1;
 }
-.slick-prev { left: -40px !important; }
-.slick-next { right: -40px !important; }
+.slick-prev {
+  left: -40px !important;
+}
+.slick-next {
+  right: -40px !important;
+}
 .slick-dots {
-  margin-bottom: 0; 
+  margin-bottom: 0;
 }
 
 /* ===== Map & Access Info ===== */
@@ -296,16 +297,15 @@ footer p {
   font-size: 0.9rem;
 }
 
-/* ===== Responsive (768px以下 => スマホ) ===== */
+/* ===== Responsive (768px以下) ===== */
 @media (max-width: 768px) {
   .pc-header {
     display: none; /* PCヘッダー非表示 */
   }
   .sp-header {
-    display: block; /* スマホヘッダー表示 */
+    display: block; /* SPヘッダー表示 */
   }
 
-  /* トップページhero高さなど */
   .hero {
     height: 250px;
   }
@@ -322,7 +322,11 @@ footer p {
     font-size: 0.9rem;
   }
 
-  /* slick矢印位置をさらに狭める場合 */
-  .slick-prev { left: -30px !important; }
-  .slick-next { right: -30px !important; }
+  /* slick矢印余白さらに狭め */
+  .slick-prev {
+    left: -30px !important;
+  }
+  .slick-next {
+    right: -30px !important;
+  }
 }

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>片岡屋 - メニュー</title>
-  <meta name="description" content="片岡屋のメニューページ。jQuery+slickで5秒ごとに画像切り替え。画像は1.3倍で余白狭め。">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="片岡屋のメニューページ。jQuery+slickで画像を1.3倍・余白狭め、5秒おきに自動切り替え。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ▼ 共通CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 
   <!-- ▼ jQuery (CDN) -->
   <script 
@@ -54,9 +54,7 @@
     <div class="sp-header">
       <div class="wrapper sp-header-inner">
         <div class="hamburger" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </div>
         <div class="sp-site-title" data-lang-ja="片岡屋" data-lang-en="Kataokaya">片岡屋</div>
         <div class="sp-lang-buttons">
@@ -78,7 +76,7 @@
     </div>
   </header>
 
-  <!-- ===== メニューセクション ===== -->
+  <!-- ===== メニュー ===== -->
   <section class="menu-section">
     <div class="wrapper">
       <h2 class="section-title" data-lang-ja="メニュー" data-lang-en="Menu">メニュー</h2>
@@ -106,7 +104,7 @@
         </tbody>
       </table>
 
-      <!-- slickスライダー: そば -->
+      <!-- slickスライダー: そば (画像1.3倍、余白狭め) -->
       <div class="slick-slider" id="slickSoba">
         <div><img src="images/soba1.jpg" alt="そば1"></div>
         <div><img src="images/soba2.jpg" alt="そば2"></div>
@@ -168,51 +166,11 @@
   </footer>
 
   <!-- ▼ slick JS (CDN) -->
-  <script 
-    type="text/javascript" 
-    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-  <!-- ===== 自作JS ===== -->
-  <script>
-    function toggleMenu() {
-      document.getElementById('overlayMenu').classList.toggle('active');
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const savedLang = localStorage.getItem('lang');
-      if (savedLang) switchLang(savedLang);
-
-      // slickスライダー初期化
-      initSlick('#slickSoba');
-      initSlick('#slickSet');
-      initSlick('#slickGohan');
-    });
-
-    function switchLang(lang) {
-      localStorage.setItem('lang', lang);
-      document.querySelectorAll('[data-lang-ja]').forEach(el => {
-        el.textContent = (lang === 'ja')
-          ? el.getAttribute('data-lang-ja')
-          : el.getAttribute('data-lang-en');
-      });
-    }
-
-    // slickの初期化 (5秒おきに自動切り替え)
-    function initSlick(selector) {
-      if ($(selector).length > 0) {
-        $(selector).slick({
-          autoplay: true,
-          autoplaySpeed: 5000,  // 5秒
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,   // 下のドット
-          arrows: true, // 左右矢印
-          infinite: true,
-          speed: 500
-        });
-      }
-    }
-  </script>
+  <!-- ▼ 共通JS -->
+  <script src="js/main.js"></script>
+  <!-- ▼ メニュー専用JS (slick初期化) -->
+  <script src="js/menu.js"></script>
 </body>
 </html>
