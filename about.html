@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>片岡屋 - お店紹介</title>
+  <meta name="description" content="片岡屋の歴史やこだわりをご紹介します。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <!-- PC版ヘッダー -->
+    <div class="pc-header">
+      <div class="wrapper pc-header-inner">
+        <div class="pc-logo" data-lang-ja="片岡屋" data-lang-en="Kataokaya">片岡屋</div>
+        <nav class="pc-nav">
+          <ul>
+            <li><a href="index.html" data-lang-ja="トップ" data-lang-en="Home">トップ</a></li>
+            <li><a href="about.html" data-lang-ja="お店紹介" data-lang-en="About">お店紹介</a></li>
+            <li><a href="menu.html" data-lang-ja="メニュー" data-lang-en="Menu">メニュー</a></li>
+            <li><a href="access.html" data-lang-ja="アクセス" data-lang-en="Access">アクセス</a></li>
+          </ul>
+        </nav>
+        <div class="pc-lang-buttons">
+          <button onclick="switchLang('ja')">日</button>
+          <button onclick="switchLang('en')">EN</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- スマホ版ヘッダー -->
+    <div class="sp-header">
+      <div class="wrapper sp-header-inner">
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="sp-site-title" data-lang-ja="片岡屋" data-lang-en="Kataokaya">片岡屋</div>
+        <div class="sp-lang-buttons">
+          <button onclick="switchLang('ja')">日</button>
+          <button onclick="switchLang('en')">EN</button>
+        </div>
+      </div>
+      <div class="overlay-menu" id="overlayMenu">
+        <div class="overlay-content">
+          <ul>
+            <li><a href="index.html" data-lang-ja="トップ" data-lang-en="Home">トップ</a></li>
+            <li><a href="about.html" data-lang-ja="お店紹介" data-lang-en="About">お店紹介</a></li>
+            <li><a href="menu.html" data-lang-ja="メニュー" data-lang-en="Menu">メニュー</a></li>
+            <li><a href="access.html" data-lang-ja="アクセス" data-lang-en="Access">アクセス</a></li>
+          </ul>
+        </div>
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== About Section ===== -->
+  <section>
+    <div class="wrapper about-container">
+      <div class="about-text">
+        <h2 class="section-title" data-lang-ja="片岡屋について" data-lang-en="About Kataokaya">
+          片岡屋について
+        </h2>
+        <p data-lang-ja="片岡屋は江戸時代より続く老舗として、地元の皆さまに愛され続けてきました。古き良き伝統と新しい感性を取り入れながら、常に最高の一杯を追求しております。"
+           data-lang-en="As a long-established restaurant from the Edo period, Kataokaya has been cherished by locals for generations.">
+          片岡屋は江戸時代より続く老舗として、地元の皆さまに愛され続けてきました。古き良き伝統と新しい感性を取り入れながら、常に最高の一杯を追求しております。
+        </p>
+        <p data-lang-ja="名物のそばやうなぎ、天ぷらはもちろん、四季折々の素材を活かした日本料理を多数ご用意。ご家族やご友人とのお食事や接待にもご利用いただける空間づくりを心がけています。"
+           data-lang-en="We offer soba, unagi, tempura, and seasonal dishes. Our space is ideal for family gatherings or business dinners.">
+          名物のそばやうなぎ、天ぷらはもちろん、四季折々の素材を活かした日本料理を多数ご用意。ご家族やご友人とのお食事や接待にもご利用いただける空間づくりを心がけています。
+        </p>
+      </div>
+      <div>
+        <img src="images/inside.jpg" alt="店内写真" style="max-width:400px; width:100%; border:1px solid #c8b998;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p data-lang-ja="© 2025 片岡屋" data-lang-en="© 2025 Kataokaya">© 2025 片岡屋</p>
+  </footer>
+
+  <!-- ===== JavaScript ===== -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('overlayMenu').classList.toggle('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('lang');
+      if (savedLang) switchLang(savedLang);
+    });
+    function switchLang(lang) {
+      localStorage.setItem('lang', lang);
+      document.querySelectorAll('[data-lang-ja]').forEach(el => {
+        el.textContent = (lang === 'ja')
+          ? el.getAttribute('data-lang-ja')
+          : el.getAttribute('data-lang-en');
+      });
+    }
+  </script>
+</body>
+</html>

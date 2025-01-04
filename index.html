@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>片岡屋 - トップ</title>
+  <meta name="description" content="江戸時代から続く日本料理店「片岡屋」の公式サイト。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <!-- PC版ナビゲーション（768px超） -->
+    <div class="pc-header">
+      <div class="wrapper pc-header-inner">
+        <div class="pc-logo" data-lang-ja="片岡屋" data-lang-en="Kataokaya">片岡屋</div>
+        <nav class="pc-nav">
+          <ul>
+            <li><a href="index.html" data-lang-ja="トップ" data-lang-en="Home">トップ</a></li>
+            <li><a href="about.html" data-lang-ja="お店紹介" data-lang-en="About">お店紹介</a></li>
+            <li><a href="menu.html" data-lang-ja="メニュー" data-lang-en="Menu">メニュー</a></li>
+            <li><a href="access.html" data-lang-ja="アクセス" data-lang-en="Access">アクセス</a></li>
+          </ul>
+        </nav>
+        <div class="pc-lang-buttons">
+          <button onclick="switchLang('ja')">日</button>
+          <button onclick="switchLang('en')">EN</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- スマホ版ヘッダー（768px以下） -->
+    <div class="sp-header">
+      <div class="wrapper sp-header-inner">
+        <!-- 左端: ハンバーガー -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- 中央: 店名 -->
+        <div class="sp-site-title" data-lang-ja="片岡屋" data-lang-en="Kataokaya">片岡屋</div>
+        <!-- 右端: 言語ボタン -->
+        <div class="sp-lang-buttons">
+          <button onclick="switchLang('ja')">日</button>
+          <button onclick="switchLang('en')">EN</button>
+        </div>
+      </div>
+      <!-- ハンバーガーメニューオーバーレイ -->
+      <div class="overlay-menu" id="overlayMenu">
+        <div class="overlay-content">
+          <ul>
+            <li><a href="index.html" data-lang-ja="トップ" data-lang-en="Home">トップ</a></li>
+            <li><a href="about.html" data-lang-ja="お店紹介" data-lang-en="About">お店紹介</a></li>
+            <li><a href="menu.html" data-lang-ja="メニュー" data-lang-en="Menu">メニュー</a></li>
+            <li><a href="access.html" data-lang-ja="アクセス" data-lang-en="Access">アクセス</a></li>
+          </ul>
+        </div>
+        <!-- ×ボタン -->
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero (スライドショー) ===== -->
+  <div class="hero">
+    <div class="slide-image" id="slide1"></div>
+    <div class="slide-image" id="slide2"></div>
+    <div class="slide-image" id="slide3"></div>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 data-lang-ja="江戸時代から続く伝統の味" data-lang-en="Traditional Taste Since the Edo Period">
+        江戸時代から続く伝統の味
+      </h1>
+      <p data-lang-ja="そば・うなぎ・天ぷらが自慢の老舗料亭" data-lang-en="A long-established restaurant proud of soba, unagi, and tempura">
+        そば・うなぎ・天ぷらが自慢の老舗料亭
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Introduction ===== -->
+  <section>
+    <div class="wrapper">
+      <h2 class="section-title" data-lang-ja="ようこそ片岡屋へ" data-lang-en="Welcome to Kataokaya">ようこそ片岡屋へ</h2>
+      <p data-lang-ja="江戸時代から受け継ぐ味わいを、現代に伝える日本料理店です。厳選された食材と職人の技が織りなす逸品を、どうぞ心ゆくまでお楽しみください。"
+         data-lang-en="Carrying on flavors from the Edo period, we bring traditional Japanese cuisine to modern diners.">
+        江戸時代から受け継ぐ味わいを、現代に伝える日本料理店です。厳選された食材と職人の技が織りなす逸品を、どうぞ心ゆくまでお楽しみください。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p data-lang-ja="© 2025 片岡屋" data-lang-en="© 2025 Kataokaya">© 2025 片岡屋</p>
+  </footer>
+
+  <!-- ===== JavaScript ===== -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('overlayMenu').classList.toggle('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('lang');
+      if (savedLang) switchLang(savedLang);
+    });
+    function switchLang(lang) {
+      localStorage.setItem('lang', lang);
+      const elements = document.querySelectorAll('[data-lang-ja]');
+      elements.forEach(el => {
+        el.textContent = (lang === 'ja')
+          ? el.getAttribute('data-lang-ja')
+          : el.getAttribute('data-lang-en');
+      });
+    }
+
+    // フェードスライドショー
+    const imagePaths = [ "images/hero1.jpg", "images/hero2.jpg", "images/hero3.jpg" ];
+    const slides = [
+      document.getElementById('slide1'),
+      document.getElementById('slide2'),
+      document.getElementById('slide3')
+    ];
+    slides.forEach((el, i) => el.style.backgroundImage = `url(${imagePaths[i]})`);
+    let currentSlide = 0;
+    slides[currentSlide].classList.add('active');
+    function showNextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+    setInterval(showNextSlide, 3000);
+  </script>
+</body>
+</html>
