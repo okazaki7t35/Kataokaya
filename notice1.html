@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>お知らせ - GW特別メニュー</title>
+  <meta name="description" content="GW期間中の特別メニューについてのお知らせ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ▼ 共通CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <!-- PCヘッダー (768px以上) -->
+    <div class="pc-header">
+      <div class="wrapper pc-header-inner">
+        <div class="pc-logo" data-lang-ja="片岡屋" data-lang-en="Kataokaya">片岡屋</div>
+        <nav class="pc-nav">
+          <ul>
+            <li><a href="index.html" data-lang-ja="トップ" data-lang-en="Home">トップ</a></li>
+            <li><a href="about.html" data-lang-ja="お店紹介" data-lang-en="About">お店紹介</a></li>
+            <li><a href="menu.html" data-lang-ja="メニュー" data-lang-en="Menu">メニュー</a></li>
+            <li><a href="access.html" data-lang-ja="アクセス" data-lang-en="Access">アクセス</a></li>
+          </ul>
+        </nav>
+        <div class="pc-lang-buttons">
+          <button onclick="switchLang('ja')">日</button>
+          <button onclick="switchLang('en')">EN</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- スマホヘッダー (768px以下) -->
+    <div class="sp-header">
+      <div class="wrapper sp-header-inner">
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="sp-site-title" data-lang-ja="片岡屋" data-lang-en="Kataokaya">片岡屋</div>
+        <div class="sp-lang-buttons">
+          <button onclick="switchLang('ja')">日</button>
+          <button onclick="switchLang('en')">EN</button>
+        </div>
+      </div>
+      <div class="overlay-menu" id="overlayMenu">
+        <div class="overlay-content">
+          <ul>
+            <li><a href="index.html" data-lang-ja="トップ" data-lang-en="Home">トップ</a></li>
+            <li><a href="about.html" data-lang-ja="お店紹介" data-lang-en="About">お店紹介</a></li>
+            <li><a href="menu.html" data-lang-ja="メニュー" data-lang-en="Menu">メニュー</a></li>
+            <li><a href="access.html" data-lang-ja="アクセス" data-lang-en="Access">アクセス</a></li>
+          </ul>
+        </div>
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== お知らせ詳細 ===== -->
+  <section>
+    <div class="wrapper">
+      <h2 class="section-title">【5月5日】GW特別メニュー開始のお知らせ</h2>
+      <p style="margin-bottom:20px;">投稿日：2025年4月28日</p>
+
+      <p style="margin-bottom:20px;">
+        ゴールデンウィーク期間中（5/5～5/7）は、季節の食材を使った
+        特別メニューをご提供いたします。通常メニューに加えて限定のお料理も登場。
+        ぜひこの機会にご来店くださいませ。
+      </p>
+
+      <div style="margin-bottom:20px;">
+        <img src="images/hero3.jpg" alt="GW特別メニューイメージ" style="max-width:400px; width:100%; border:1px solid #c8b998;">
+      </div>
+
+      <p>
+        <strong>特別メニュー例：</strong><br>
+        ・春野菜の天ぷら盛り合わせ<br>
+        ・うな重（特上）<br>
+        ・限定甘味 さくら餅セット<br>
+        などなど…
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p data-lang-ja="© 2025 片岡屋" data-lang-en="© 2025 Kataokaya">© 2025 片岡屋</p>
+  </footer>
+
+  <!-- ▼ 共通JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

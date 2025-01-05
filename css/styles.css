@@ -352,3 +352,12 @@ footer p {
     opacity: 1;
   }
 }
+
+/* ===== お知らせリンクの色・ホバー ===== */
+.notice-link {
+  color: #c8b998; /* 通常時のリンク色 (明るめのベージュ) */
+  transition: color 0.3s ease;
+}
+.notice-link:hover {
+  color: #ffebc4; /* マウスオーバー時のリンク色 (さらに明るいベージュ系) */
+}
