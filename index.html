@@ -34,13 +34,14 @@
     <!-- スマホヘッダー (768px以下) -->
     <div class="sp-header">
       <div class="wrapper sp-header-inner">
-        <div class="hamburger" onclick="toggleMenu()">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="sp-site-title" data-lang-ja="片岡屋" data-lang-en="Kataokaya">片岡屋</div>
+        <!-- 順序をタイトル → 言語切り替えボタン → ハンバーガー に変更 -->
         <div class="sp-lang-buttons">
           <button onclick="switchLang('ja')">日</button>
           <button onclick="switchLang('en')">EN</button>
+        </div>
+        <div class="sp-site-title" data-lang-ja="片岡屋" data-lang-en="Kataokaya">片岡屋</div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
         </div>
       </div>
       <div class="overlay-menu" id="overlayMenu">
@@ -85,14 +86,13 @@
     </div>
   </section>
 
-  <!-- ===== お知らせ Section (修正) ===== -->
+  <!-- ===== お知らせ Section ===== -->
   <section>
     <div class="wrapper">
       <h2 class="section-title" data-lang-ja="お知らせ" data-lang-en="News">
         お知らせ
       </h2>
       <ul style="list-style:none; margin-left:0; padding-left:0;">
-        <!-- お知らせリンクにも data-lang-ja / data-lang-en を付与 -->
         <li style="margin-bottom:10px;">
           <a 
             href="notice1.html"

@@ -41,13 +41,14 @@
     <!-- スマホヘッダー -->
     <div class="sp-header">
       <div class="wrapper sp-header-inner">
-        <div class="hamburger" onclick="toggleMenu()">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="sp-site-title" data-lang-ja="片岡屋" data-lang-en="Kataokaya">片岡屋</div>
+        <!-- 順序をタイトル → 言語切り替えボタン → ハンバーガー に変更 -->
         <div class="sp-lang-buttons">
           <button onclick="switchLang('ja')">日</button>
           <button onclick="switchLang('en')">EN</button>
+        </div>
+        <div class="sp-site-title" data-lang-ja="片岡屋" data-lang-en="Kataokaya">片岡屋</div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
         </div>
       </div>
       <div class="overlay-menu" id="overlayMenu">
