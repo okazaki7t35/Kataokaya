@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>片岡屋 - メニュー</title>
-  <meta name="description" content="片岡屋のメニューページ。jQuery+slickで画像を1.3倍・余白狭め、5秒おきに自動切り替え。">
+  <meta name="description" content="片岡屋のメニューページ。jQuery+slickで画像を1.3倍・余白を狭め、5秒おきに自動切り替え。">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ▼ 共通CSS -->
@@ -17,14 +17,14 @@
   </script>
 
   <!-- ▼ slick (CDN) -->
-  <link 
-    rel="stylesheet" 
-    type="text/css" 
+  <link
+    rel="stylesheet"
+    type="text/css"
     href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
   />
-  <link 
-    rel="stylesheet" 
-    type="text/css" 
+  <link
+    rel="stylesheet"
+    type="text/css"
     href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
   />
 </head>
@@ -80,8 +80,10 @@
   <section class="menu-section">
     <div class="wrapper">
       <h2 class="section-title" data-lang-ja="メニュー" data-lang-en="Menu">メニュー</h2>
-      <p data-lang-ja="そば・うどん・うなぎをはじめ、季節の日本料理を豊富に取り揃えております。"
-         data-lang-en="We offer a variety of seasonal Japanese dishes, including soba, udon, and unagi.">
+      <p
+        data-lang-ja="そば・うどん・うなぎをはじめ、季節の日本料理を豊富に取り揃えております。"
+        data-lang-en="We offer a variety of seasonal Japanese dishes, including soba, udon, and unagi."
+      >
         そば・うどん・うなぎをはじめ、季節の日本料理を豊富に取り揃えております。
       </p>
 
@@ -90,17 +92,83 @@
       <table class="menu-table">
         <thead>
           <tr>
-            <th style="width:50%;" data-lang-ja="商品" data-lang-en="Item">商品</th>
-            <th style="width:50%;" data-lang-ja="価格" data-lang-en="Price">価格</th>
+            <th
+              style="width:50%;"
+              data-lang-ja="商品"
+              data-lang-en="Item"
+            >
+              商品
+            </th>
+            <th
+              style="width:50%;"
+              data-lang-ja="価格（税込）"
+              data-lang-en="Price (Tax Incl.)"
+            >
+              価格（税込）
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>もりそば</td><td>850円</td></tr>
-          <tr><td>ざるそば</td><td>880円</td></tr>
-          <tr><td>かけそば</td><td>680円</td></tr>
-          <tr><td>もりうどん</td><td>850円</td></tr>
-          <tr><td>ざるうどん</td><td>880円</td></tr>
-          <tr><td>かけうどん</td><td>680円</td></tr>
+          <tr>
+            <td
+              data-lang-ja="もりそば"
+              data-lang-en="Mori Soba"
+            >もりそば</td>
+            <td
+              data-lang-ja="850円"
+              data-lang-en="¥850"
+            >850円</td>
+          </tr>
+          <tr>
+            <td
+              data-lang-ja="ざるそば"
+              data-lang-en="Zaru Soba"
+            >ざるそば</td>
+            <td
+              data-lang-ja="880円"
+              data-lang-en="¥880"
+            >880円</td>
+          </tr>
+          <tr>
+            <td
+              data-lang-ja="かけそば"
+              data-lang-en="Kake Soba"
+            >かけそば</td>
+            <td
+              data-lang-ja="680円"
+              data-lang-en="¥680"
+            >680円</td>
+          </tr>
+          <tr>
+            <td
+              data-lang-ja="もりうどん"
+              data-lang-en="Mori Udon"
+            >もりうどん</td>
+            <td
+              data-lang-ja="850円"
+              data-lang-en="¥850"
+            >850円</td>
+          </tr>
+          <tr>
+            <td
+              data-lang-ja="ざるうどん"
+              data-lang-en="Zaru Udon"
+            >ざるうどん</td>
+            <td
+              data-lang-ja="880円"
+              data-lang-en="¥880"
+            >880円</td>
+          </tr>
+          <tr>
+            <td
+              data-lang-ja="かけうどん"
+              data-lang-en="Kake Udon"
+            >かけうどん</td>
+            <td
+              data-lang-ja="680円"
+              data-lang-en="¥680"
+            >680円</td>
+          </tr>
         </tbody>
       </table>
 
@@ -116,14 +184,53 @@
       <table class="menu-table">
         <thead>
           <tr>
-            <th style="width:50%;" data-lang-ja="商品" data-lang-en="Item">商品</th>
-            <th style="width:50%;" data-lang-ja="価格" data-lang-en="Price">価格</th>
+            <th
+              style="width:50%;"
+              data-lang-ja="商品"
+              data-lang-en="Item"
+            >
+              商品
+            </th>
+            <th
+              style="width:50%;"
+              data-lang-ja="価格（税込）"
+              data-lang-en="Price (Tax Incl.)"
+            >
+              価格（税込）
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>えび天丼とそば/うどんセット</td><td>1,200円</td></tr>
-          <tr><td>かき揚げ丼とそば/うどんセット</td><td>1,100円</td></tr>
-          <tr><td>サービスランチ（天ぷら・そば/うどん・半ライス・香の物）</td><td>1,300円</td></tr>
+          <tr>
+            <td
+              data-lang-ja="えび天丼とそば/うどんセット"
+              data-lang-en="Shrimp Tempura Bowl & Soba/Udon Set"
+            >えび天丼とそば/うどんセット</td>
+            <td
+              data-lang-ja="1,200円"
+              data-lang-en="¥1,200"
+            >1,200円</td>
+          </tr>
+          <tr>
+            <td
+              data-lang-ja="かき揚げ丼とそば/うどんセット"
+              data-lang-en="Kakiage Bowl & Soba/Udon Set"
+            >かき揚げ丼とそば/うどんセット</td>
+            <td
+              data-lang-ja="1,100円"
+              data-lang-en="¥1,100"
+            >1,100円</td>
+          </tr>
+          <tr>
+            <td
+              data-lang-ja="サービスランチ（天ぷら・そば/うどん・半ライス・香の物）"
+              data-lang-en="Lunch Special (Tempura, Soba/Udon, Half Rice, Pickles)"
+            >サービスランチ（天ぷら・そば/うどん・半ライス・香の物）</td>
+            <td
+              data-lang-ja="1,300円"
+              data-lang-en="¥1,300"
+            >1,300円</td>
+          </tr>
         </tbody>
       </table>
       <div class="slick-slider" id="slickSet">
@@ -137,18 +244,93 @@
       <table class="menu-table">
         <thead>
           <tr>
-            <th style="width:50%;" data-lang-ja="商品" data-lang-en="Item">商品</th>
-            <th style="width:50%;" data-lang-ja="価格" data-lang-en="Price">価格</th>
+            <th
+              style="width:50%;"
+              data-lang-ja="商品"
+              data-lang-en="Item"
+            >
+              商品
+            </th>
+            <th
+              style="width:50%;"
+              data-lang-ja="価格（税込）"
+              data-lang-en="Price (Tax Incl.)"
+            >
+              価格（税込）
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>天ぷら定食</td><td>1,500円</td></tr>
-          <tr><td>玉子重</td><td>700円</td></tr>
-          <tr><td>親子重</td><td>850円</td></tr>
-          <tr><td>天丼</td><td>1,500円</td></tr>
-          <tr><td>並天重</td><td>1,200円</td></tr>
-          <tr><td>上天重</td><td>1,500円</td></tr>
-          <tr><td>うな重</td><td>4,200円</td></tr>
+          <tr>
+            <td
+              data-lang-ja="天ぷら定食"
+              data-lang-en="Tempura Set Meal"
+            >天ぷら定食</td>
+            <td
+              data-lang-ja="1,500円"
+              data-lang-en="¥1,500"
+            >1,500円</td>
+          </tr>
+          <tr>
+            <td
+              data-lang-ja="玉子重"
+              data-lang-en="Egg Donburi"
+            >玉子重</td>
+            <td
+              data-lang-ja="700円"
+              data-lang-en="¥700"
+            >700円</td>
+          </tr>
+          <tr>
+            <td
+              data-lang-ja="親子重"
+              data-lang-en="Oyakodon"
+            >親子重</td>
+            <td
+              data-lang-ja="850円"
+              data-lang-en="¥850"
+            >850円</td>
+          </tr>
+          <tr>
+            <td
+              data-lang-ja="天丼"
+              data-lang-en="Tendon (Tempura Bowl)"
+            >天丼</td>
+            <td
+              data-lang-ja="1,500円"
+              data-lang-en="¥1,500"
+            >1,500円</td>
+          </tr>
+          <tr>
+            <td
+              data-lang-ja="並天重"
+              data-lang-en="Nami Tenju (Regular Tempura Box)"
+            >並天重</td>
+            <td
+              data-lang-ja="1,200円"
+              data-lang-en="¥1,200"
+            >1,200円</td>
+          </tr>
+          <tr>
+            <td
+              data-lang-ja="上天重"
+              data-lang-en="Jo Tenju (Premium Tempura Box)"
+            >上天重</td>
+            <td
+              data-lang-ja="1,500円"
+              data-lang-en="¥1,500"
+            >1,500円</td>
+          </tr>
+          <tr>
+            <td
+              data-lang-ja="うな重"
+              data-lang-en="Unaju (Eel Box)"
+            >うな重</td>
+            <td
+              data-lang-ja="4,200円"
+              data-lang-en="¥4,200"
+            >4,200円</td>
+          </tr>
         </tbody>
       </table>
       <div class="slick-slider" id="slickGohan">
